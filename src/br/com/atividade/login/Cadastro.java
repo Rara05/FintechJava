@@ -149,27 +149,27 @@ public class Cadastro {
 
         while (sobreNome.length() < 1 ) {
             System.out.println("Nome digitado inválido");
-            System.out.print("Digite seu Nome: ");
+            System.out.print("Digite seu sobrenome: ");
             sobreNome = input.nextLine();
         }
 
         System.out.print("Digite sua senha: ");
         senha = input.nextLine();
 
-//        while (senha.length() < 5 ) {
-//            System.out.println("Senha cadastrada irregular");
-//            System.out.print("Digite seu Nome: ");
-//            senha = input.nextLine();
-//        }
+        while (senha.length() < 5 ) {
+            System.out.println("Senha cadastrada irregular");
+            System.out.print("Digite sua senha: ");
+            senha = input.nextLine();
+        }
 
         System.out.print("Digite algumas informações sobre você: ");
         sobre = input.nextLine();
 
-//        while (sobre.length() > 320 ) {
-//            System.out.println("Quantidade de caracteres exedida");
-//            System.out.print("Digite algumas informações sobre você: ");
-//            sobre = input.nextLine();
-//        }
+        while (sobre.length() > 320 ) {
+            System.out.println("Quantidade de caracteres exedida");
+            System.out.print("Digite algumas informações sobre você: ");
+            sobre = input.nextLine();
+        }
 
 
         System.out.print("O url da sua foto: ");
@@ -182,21 +182,21 @@ public class Cadastro {
         System.out.print("Digite seu telefone: ");
         telefone = input.nextLine();
 
-//        while (telefone.length() != 9){
-//            System.out.println("Valor digitado inválido");
-//            System.out.print("Digite seu telefone: ");
-//            telefone = input.nextLine();
-//        }
+        while (telefone.length() != 9){
+            System.out.println("Valor digitado inválido");
+            System.out.print("Digite seu telefone: ");
+            telefone = input.nextLine();
+        }
 
         System.out.print("Digite seu CPF: ");
         cpf = input.nextLine();
 
 
-//        while (cpf.length() != 11 ) {
-//            System.out.println("Valor digitado inválido");
-//            System.out.print("Digite seu CPF: ");
-//            telefone = input.nextLine();
-//        }
+        while (cpf.length() != 11 ) {
+            System.out.println("Valor digitado inválido");
+            System.out.print("Digite seu CPF: ");
+            cpf = input.nextLine();
+        }
 
 
 
