@@ -4,13 +4,10 @@ import br.com.atividade.conta.Conta;
 import br.com.atividade.conta.Extrato;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Scanner;
 import java.util.Set;
 
-import org.junit.jupiter.api.Assertions;
-import junit.framework.*;
+
 
 import static org.junit.Assert.assertEquals;
 

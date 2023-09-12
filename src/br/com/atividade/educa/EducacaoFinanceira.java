@@ -8,12 +8,6 @@ public class EducacaoFinanceira {
 
     List<Canal> canais = new ArrayList<>();
 
-    String idCanal;
-    String nomeCanal;
-    String url;
-    String descricaoCanal;
-
-
     // Construtor vazio
     public EducacaoFinanceira() {    }
 

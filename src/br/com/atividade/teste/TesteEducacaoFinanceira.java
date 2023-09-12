@@ -4,8 +4,6 @@ import br.com.atividade.educa.EducacaoFinanceira;
 
 import java.util.Objects;
 
-import org.junit.jupiter.api.Assertions;
-import junit.framework.*;
 import static org.junit.Assert.assertEquals;
 public class TesteEducacaoFinanceira {
 
