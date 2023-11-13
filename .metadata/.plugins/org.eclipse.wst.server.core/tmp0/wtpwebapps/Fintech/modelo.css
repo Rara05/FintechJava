@@ -34,10 +34,40 @@
 .princ {
 	color:rgb(0, 0, 0);
 	background-color: rgb(245, 245, 245);
-}
+	
+	}
+	
 
 .recurso{
 	
 	border: 2px dashed #00ff00;
 	
 }
+/* estilo de cadastro*/
+
+.card-body{
+	
+	 font-size: 28px;
+	 font-weight: 700; 
+	 font-style: italic;
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -2,7 +2,7 @@
 <nav id="navegacao" class="navbar navbar-expand-lg ">
 
 <!--inicio logo -->
-      <a id="logo" class="navbar-brand" href="#">TryBank</a>
+      <a id="logo" class="navbar-brand" href="home.jsp">TryBank</a>
 <!-- Fim da logo   -->  
       
 <!-- inicio Nav -->
@@ -16,7 +16,7 @@
       <div  class="d-flex">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="#">Inicio</a>
+          <a class="nav-link" href="home.jsp">Inicio</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Login</a>

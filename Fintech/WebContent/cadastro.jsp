@@ -10,28 +10,63 @@
     <title>TryBank</title>
     <%@ include file="header.jsp" %>
 
-<body>
+<body style="background-color: #619bff;">
+
+<%@ include file="menu.jsp" %>
 
 
 
+    
+<div id="cadas" class="container" style=" margin-bottom: 100px; margin-top: 50px; background-color: #619bff;">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-lg-12 col-md-8 col-sm-10"> <!-- Ajustei os tamanhos para diferentes breakpoints -->
+                    
+                    <h1 class="" style=" margin-bottom: 30px; font-weight: 500; font-style: italic" >Cadastro de Usuário</h1>
+               
+            <div id="cadastro" class="card" style=" font-size: 18px; font-weight: 500; font-style: italic; ">
+                <div class="card-body">
 
+                    <form action="/Fintech/CadastroServlet" method="post">
+                        <div class="form-group" style="margin-top: 20px;">
+                            <label for="nome">Nome:</label>
+                            <input class="form-control" type="text"  name="nome" required>
+                        </div>
 
+                        <!-- Campo para a senha -->
+                        <div class="form-group" style="margin-top: 20px;">
+                            <label for="senha">Senha:</label>
+                            <input  class="form-control" type="password" name="senha" required >
+                        </div>
 
+                        <!-- Campo para a foto (considerando que seja um upload de arquivo) -->
+                        <div class="form-group" style="margin-top: 20px;">
+                            <label for="foto">Foto:</label>
+                            <input class="form-control" type="file" id="formFile">
+                        </div>
 
+                        <!-- Campo para o email -->
+                        <div class="form-group" style="margin-top: 20px;">
+                            <label for="email">Email:</label>
+                            <input class="form-control" type="email" name="email" required>
+                        </div>
 
+                        <!-- Campo para o telefone -->
+                        <div class="form-group" style="margin-top: 20px;">
+                            <label for="telefone">Telefone:</label>
+                            <input class="form-control" type="tel"  name="telefone" required>
+                        </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
+                        <!-- Botão de envio do formulário -->
+                        <button type="submit" class="btn btn btn-success btn-block" style="margin-top: 20px;">Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+		
+		
+  
 
 
 
@@ -44,7 +79,7 @@
 </body>
 
 
-
+</html>
 
 
 

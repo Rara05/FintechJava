@@ -50,9 +50,8 @@ public class Cadastro extends HttpServlet {
             PrintWriter out = response.getWriter();
             out.println("<html><body>");
             out.println("<h2>Cadastro realizado com sucesso:</h2>");
-            out.println("<p>Nome: " + nome + "</p>");
-            out.println("<p>Email: " + email + "</p>");
             out.println("</body></html>");
+  
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
             response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Erro ao processar o cadastro");
