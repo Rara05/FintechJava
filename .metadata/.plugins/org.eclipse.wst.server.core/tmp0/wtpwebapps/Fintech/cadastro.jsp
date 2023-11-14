@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
     <!-- link css -->
-    <link rel="stylesheet" type="text/css" href="modelo.css">
+    <link rel="stylesheet" type="text/css" href="modello.css">
 
     <title>TryBank</title>
     <%@ include file="header.jsp" %>
@@ -23,7 +23,7 @@
                     
                     <h1 class="" style=" margin-bottom: 30px; font-weight: 500; font-style: italic" >Cadastro de Usuário</h1>
                
-            <div id="cadastro" class="card" style=" font-size: 18px; font-weight: 500; font-style: italic; ">
+            <div id="cadastro" class="card" style=" font-size: 18px; font-style: italic; ">
                 <div class="card-body">
 
                     <form action="/Fintech/CadastroServlet" method="post">
