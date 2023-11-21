@@ -1,0 +1,44 @@
+package banco;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/adicionardivida")
+public class AdicionarDividaServlet extends HttpServlet {
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String valor = request.getParameter("valor"); // Supondo que você recebe o valor da dívida do formulário
+
+        // Configurações de conexão ao banco de dados
+        String url = "jdbc:mysql://localhost:3306/seu_banco_de_dados";
+        String usuario = "seu_usuario";
+        String senha = "sua_senha";
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection conexao = DriverManager.getConnection(url, usuario, senha);
+
+            // Consulta SQL para inserir a dívida
+            String sql = "INSERT INTO tabela_dividas (valor) VALUES (?)";
+            PreparedStatement declaracao = conexao.prepareStatement(sql);
+            declaracao.setString(1, valor);
+            declaracao.executeUpdate();
+
+            declaracao.close();
+            conexao.close();
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+            // Tratar erros de conexão ou inserção no banco de dados
+        }
+
+        response.sendRedirect("pagina-de-sucesso-divida.jsp"); // Redirecionamento para uma página de sucesso
+    }
+}

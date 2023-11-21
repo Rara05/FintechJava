@@ -19,7 +19,7 @@
           <a class="nav-link" href="home.jsp">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Login</a>
+          <a class="nav-link" href="login.jsp">Login</a>
         </li>
         <li class="nav-item">
           <a class="btn btn-success" href="cadastro.jsp">Cadastro</a>

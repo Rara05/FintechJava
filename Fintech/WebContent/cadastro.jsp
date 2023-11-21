@@ -46,7 +46,7 @@
 
                         <!-- Campo para o email -->
                         <div class="form-group" style="margin-top: 20px;">
-                            <label for="email">Email:</label>
+                            <label for="email">E-mail:</label>
                             <input class="form-control" type="email" name="email" required>
                         </div>
 
@@ -66,14 +66,6 @@
 </div>
 		
 		
-  
-
-
-
-
-
-
-
 
 <%@ include file="footer.jsp" %>
 </body>

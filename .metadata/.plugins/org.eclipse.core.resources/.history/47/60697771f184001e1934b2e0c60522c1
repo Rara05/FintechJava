@@ -1,0 +1,77 @@
+@charset "ISO-8859-1";
+/*Estilo do menu*/
+#marge{
+	background-color: rgb(0, 128, 255);
+	
+}
+
+
+#navegacao {
+	background-color: rgb(0, 128, 255);
+	
+}
+	
+#navbarTogglerDemo01{
+	margin-left: 14px ;
+	
+}
+
+.nav-item {
+	font-size: 18px;
+	font-weight: 500;
+}	
+
+#logo {
+
+    font-size: 28px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+
+/*Estilo da Home*/
+.princ {
+	color:rgb(0, 0, 0);
+	background-color: rgb(245, 245, 245);
+	
+	}
+	
+
+.recurso{
+	
+	border: 2px dashed #00ff00;
+	
+}
+/* estilo de cadastro*/
+
+element.style {
+    width: 280px;
+}
+.p-3 {
+    padding: 1rem!important;
+}
+.flex-shrink-0 {
+    flex-shrink: 0!important;
+}
+.flex-column {
+    flex-direction: column!important;
+}
+
+.d-flex {
+    display: flex!important;
+}
+.text-bg-dark {
+    color: #fff!important;
+    background-color: RGBA(var(--bs-dark-rgb),var(--bs-bg-opacity,1))!important;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+
+
+

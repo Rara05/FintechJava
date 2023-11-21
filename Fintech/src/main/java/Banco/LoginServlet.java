@@ -21,23 +21,23 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
 
         if (validateLogin(email, password)) {
-            response.sendRedirect("/SeuProjeto/success.jsp"); // Página de sucesso
+            response.sendRedirect("/Fintech/perfil.jsp"); // Página de sucesso
         } else {
-            response.sendRedirect("/SeuProjeto/failure.jsp"); // Página de falha
+            response.sendRedirect("/Fintech/home.jsp"); // Página de falha
         }
     }
 
     private boolean validateLogin(String email, String password) {
         // Substitua as informações de conexão com seu banco de dados
         String jdbcURL = "jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL";
-        String dbUser = "seu_usuario";
-        String dbPassword = "sua_senha";
+        String dbUser = "RM552119";
+        String dbPassword = "270998";
 
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("oracle.jdbc.driver.OracleDriver");
             Connection connection = DriverManager.getConnection(jdbcURL, dbUser, dbPassword);
 
-            String sql = "SELECT * FROM usuarios WHERE email = ? AND senha = ?";
+            String sql = "SELECT * FROM usuario WHERE email = ? AND senha = ?";
             try (PreparedStatement statement = connection.prepareStatement(sql)) {
                 statement.setString(1, email);
                 statement.setString(2, password);

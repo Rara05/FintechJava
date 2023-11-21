@@ -1,0 +1,93 @@
+package Banco;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+/**
+ * Servlet implementation class SelectPerfil
+ */
+
+@WebServlet("/SelectPerfil")
+public class SelectPerfil extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public SelectPerfil() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	    // Obtém o valor do select do parâmetro enviado pela requisição
+	    String perfilSelecionado = request.getParameter("perfil");
+
+	    // Define o tipo de conteúdo da resposta como texto
+	    response.setContentType("text/plain");
+
+	    // Envia o valor selecionado de volta para o frontend
+	    response.getWriter().write("Perfil selecionado: " + perfilSelecionado);
+	}
+	
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	    String email = request.getParameter("email");
+	    String senha = request.getParameter("senha");
+
+	    try {
+	        Class.forName("oracle.jdbc.driver.OracleDriver");
+	        Connection conexao = Conexao.obterConexao();
+	        
+	        String sql = "SELECT nome, email, telefone FROM TbPerfil WHERE email = ? AND senha = ?";
+	        try (PreparedStatement pstmt = conexao.prepareStatement(sql)) {
+	            pstmt.setString(1, email);
+	            pstmt.setString(2, senha);
+	            ResultSet rs = pstmt.executeQuery();
+
+	            if (rs.next()) {
+	                // Usuário autenticado com sucesso
+	                // Obter os dados do perfil do ResultSet
+	                String nome = rs.getString("nome");
+	                String emailUsuario = rs.getString("email");
+	                String telefone = rs.getString("telefone");
+
+	                // Enviar os dados do perfil como resposta para o frontend
+	                response.setContentType("text/plain");
+	                response.setCharacterEncoding("UTF-8");
+
+	                PrintWriter out = response.getWriter();
+	                out.println("Nome: " + nome);
+	                out.println("Email: " + emailUsuario);
+	                out.println("Telefone: " + telefone);
+	            } else {
+	                // Usuário não encontrado
+	                response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Credenciais inválidas");
+	            }
+
+	            rs.close();
+	        }
+	        conexao.close();
+	    } catch (ClassNotFoundException | SQLException e) {
+	        e.printStackTrace();
+	        response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Erro ao processar a autenticação");
+	    }
+	}
+
+}

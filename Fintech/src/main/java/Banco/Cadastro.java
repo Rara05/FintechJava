@@ -24,6 +24,7 @@ public class Cadastro extends HttpServlet {
         String telefone = request.getParameter("telefone");
         
         
+        
 
         try {
             // Carrega o driver JDBC do Oracle
@@ -41,8 +42,7 @@ public class Cadastro extends HttpServlet {
                 pstmt.setString(4, email);
                 pstmt.setString(5, telefone);
                 pstmt.executeUpdate();
-            }
-
+            } 
             // Feche a conexão
             conexao.close();
 

@@ -49,4 +49,44 @@
     <servlet-name>Login</servlet-name>
     <url-pattern>/Login</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AdicionarDivida</display-name>
+    <servlet-name>AdicionarDivida</servlet-name>
+    <servlet-class>Banco.AdicionarDivida</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdicionarDivida</servlet-name>
+    <url-pattern>/AdicionarDivida</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AdicionarRecebimento</display-name>
+    <servlet-name>AdicionarRecebimento</servlet-name>
+    <servlet-class>Banco.AdicionarRecebimento</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdicionarRecebimento</servlet-name>
+    <url-pattern>/AdicionarRecebimento</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Pessoais</display-name>
+    <servlet-name>Pessoais</servlet-name>
+    <servlet-class>Banco.Pessoais</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Pessoais</servlet-name>
+    <url-pattern>/Pessoais</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SelectPerfil</display-name>
+    <servlet-name>SelectPerfil</servlet-name>
+    <servlet-class>Banco.SelectPerfil</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SelectPerfil</servlet-name>
+    <url-pattern>/SelectPerfil</url-pattern>
+  </servlet-mapping>
 </web-app>

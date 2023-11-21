@@ -1,0 +1,94 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<!-- link css -->
+    <link rel="stylesheet" type="text/css" href="modello.css">
+<meta charset="ISO-8859-1">
+<title>TryBanck</title>
+
+<!-- link headr  -->
+<%@ include file="header.jsp" %>
+
+
+</head>
+
+
+
+<body>
+
+<%@ include file="navPerfil.jsp" %>
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body text-center">
+          <img src="https://via.placeholder.com/150" alt="Foto do perfil" class="rounded-circle mb-3">
+          <h5 class="card-title">Nome do Usuário</h5>
+          <p class="card-text">Informações pessoais</p>
+          <hr>
+          <h6>Valor da Conta:</h6>
+          <p class="text-success">R$ 1.000,00</p>
+          <div class="row">
+            <div class="col-md-6">
+              <a href="#" class="btn btn-danger btn-block">Adicionar Dívida</a>
+            </div>
+            <div class="col-md-6">
+              <a href="#" class="btn btn-success btn-block">Adicionar Recebimento</a>
+            </div>
+          </div>
+          <hr>
+          <a href="#" class="btn btn-primary">Editar Perfil</a>
+          <a href="#" class="btn btn-warning mt-2">Ver Extrato</a>
+          
+          <!-- Recurso: Orçamento Inteligente -->
+          <div class="mt-4">
+            <h4>Orçamento Inteligente</h4>
+            <p>Atribuímos categorias automaticamente às suas despesas, proporcionando uma visão clara dos seus gastos.</p>
+          </div>
+          
+          <!-- Recurso: Investimentos Simplificados -->
+          <div class="mt-4">
+            <h4>Investimentos Simplificados</h4>
+            <p>Acesse oportunidades de investimento personalizadas, com informações claras e sugestões alinhadas aos seus objetivos.</p>
+          </div>
+          
+          <!-- Recurso: Transparência nas Transações -->
+          <div class="mt-4">
+            <h4>Transparência nas Transações</h4>
+            <p>Detalhes claros sobre cada transação, ajudando você a entender melhor seus hábitos de gastos.</p>
+          </div>
+          
+          <!-- Recurso: Alertas Personalizados -->
+          <div class="mt-4">
+            <h4>Alertas Personalizados</h4>
+            <p>Receba alertas inteligentes sobre datas de vencimento, movimentações suspeitas e oportunidades de economia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%@ include file="footer.jsp" %>
+
+</body>
+</html>
